@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://prefabs/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://prefabs/Platform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://prefabs/Camera2D.tscn" type="PackedScene" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" parent="." instance=ExtResource( 3 )]
+zoom = Vector2( 5, 5 )
+
+[node name="Platform2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1320.21, 431.833 )
+scale = Vector2( 5, 1 )
+
+[node name="Platform3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1000.21, 559.833 )
+rotation = 3.14159
+scale = Vector2( 5, 1 )
+
+[node name="Platform5" parent="." instance=ExtResource( 2 )]
+position = Vector2( -692.471, 686.7 )
+scale = Vector2( 5, 1 )
+
+[node name="Platform4" parent="." instance=ExtResource( 2 )]
+position = Vector2( -372.471, 814.7 )
+rotation = 3.14159
+scale = Vector2( 5, 1 )
+
+[node name="Platform6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 442.632, 1189.65 )
+rotation = 3.14159
+scale = Vector2( 5, 1 )
+
+[node name="Platform7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1540.88, 1612.93 )
+rotation = 3.14159
+scale = Vector2( 5, 1 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1320.21, 300.027 )
+jumpCount = 0
