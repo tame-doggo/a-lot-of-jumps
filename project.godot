@@ -16,8 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="a-lot-of-jumps"
-run/main_scene="res://scenes/test_level.tscn"
+run/main_scene="res://scenes/Level0.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Bootstrapper="*res://scenes/Bootstrapper.tscn"
 
 [input]
 
@@ -64,4 +68,5 @@ restart={
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
+environment/default_clear_color=Color( 0.2312, 0.5304, 0.68, 1 )
 environment/default_environment="res://default_env.tres"
