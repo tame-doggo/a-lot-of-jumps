@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://prefabs/Camera2D.tscn" type="PackedScene" id=1]
 [ext_resource path="res://prefabs/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://prefabs/Platform.tscn" type="PackedScene" id=3]
+[ext_resource path="res://prefabs/Goal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Level2.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
@@ -29,9 +31,6 @@ scale = Vector2( 5, 1 )
 position = Vector2( 1008.19, 1387.1 )
 scale = Vector2( 5, 1 )
 
-[node name="Goal" parent="." instance=ExtResource( 3 )]
-position = Vector2( 846.354, 1264.49 )
-
 [node name="Platform4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 688.193, 629.043 )
 scale = Vector2( 5, 1 )
@@ -42,3 +41,7 @@ scale = Vector2( 5, 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -412.219, 693.043 )
+
+[node name="Goal" parent="." instance=ExtResource( 4 )]
+position = Vector2( 822.064, 1212.96 )
+nextScene = ExtResource( 5 )
