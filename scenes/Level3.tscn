@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://prefabs/Platform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://prefabs/Camera2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://prefabs/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://prefabs/Goal.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/Level4.tscn" type="PackedScene" id=5]
+[ext_resource path="res://prefabs/RestartManager.tscn" type="PackedScene" id=5]
+[ext_resource path="res://prefabs/RestartNotificationArea.tscn" type="PackedScene" id=6]
 
 [node name="Node2D" type="Node2D"]
 
@@ -31,7 +32,14 @@ scale = Vector2( 3, 3 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, 585.471 )
+jump_count = 3
 
 [node name="Goal" parent="." instance=ExtResource( 4 )]
 position = Vector2( 511.305, -760.958 )
-nextScene = ExtResource( 5 )
+next_scene_path = "res://scenes/Level4.tscn"
+
+[node name="RestartNotificationArea" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0, 1864.71 )
+scale = Vector2( 105.76, 1 )
+
+[node name="RestartManager" parent="." instance=ExtResource( 5 )]

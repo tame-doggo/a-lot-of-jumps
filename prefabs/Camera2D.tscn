@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/Camera.gd" type="Script" id=1]
 [ext_resource path="res://scripts/RestartNotification.gd" type="Script" id=2]
+[ext_resource path="res://fonts/BLOCKETO_120.tres" type="DynamicFont" id=3]
 
 [node name="Camera2D" type="Camera2D"]
 position = Vector2( 514.806, 299.137 )
@@ -10,11 +11,16 @@ script = ExtResource( 1 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 visible = false
-margin_left = -571.938
-margin_top = -850.489
-margin_right = -456.938
-margin_bottom = -835.489
-rect_scale = Vector2( 10.3831, 10.3831 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -500.0
+margin_top = -1000.0
+margin_right = 540.0
+margin_bottom = -880.0
+rect_clip_content = false
+custom_fonts/normal_font = ExtResource( 3 )
 text = "Press R to Restart"
 script = ExtResource( 2 )
 __meta__ = {

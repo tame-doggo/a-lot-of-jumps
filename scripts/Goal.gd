@@ -1,11 +1,7 @@
 extends Area2D
 
-export(PackedScene) var nextScene
-
-func _ready():
-	if nextScene == null:
-		print("Next scene cannot be null: ", nextScene)
+export(String, FILE, "*.tscn,*.scn") var next_scene_path
 
 func _on_Goal_body_entered(_body):
-	if get_tree().change_scene_to(nextScene) != OK:
+	if get_tree().change_scene(next_scene_path) != OK:
 		print("Failed to change scene")
