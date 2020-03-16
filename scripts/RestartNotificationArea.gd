@@ -8,5 +8,5 @@ onready var notificationNode : Node2D = get_node(notificationNodePath)
 #	pass
 
 
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(_body):
 	notificationNode.activate()

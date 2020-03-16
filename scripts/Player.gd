@@ -9,7 +9,7 @@ func _ready():
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
+func _physics_process(_delta):
 	var lv = .get_linear_velocity()
 	
 	var axis = Input.get_action_strength("right") - Input.get_action_strength("left")
