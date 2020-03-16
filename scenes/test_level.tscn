@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://prefabs/Camera2D.tscn" type="PackedScene" id=1]
 [ext_resource path="res://prefabs/Platform.tscn" type="PackedScene" id=2]
 [ext_resource path="res://prefabs/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://prefabs/RestartNotificationArea.tscn" type="PackedScene" id=4]
+[ext_resource path="res://prefabs/RestartManager.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
@@ -16,12 +18,8 @@ scale = Vector2( 6.519, 1 )
 [node name="Camera2D" parent="." instance=ExtResource( 1 )]
 zoom = Vector2( 3, 3 )
 
-[node name="Label" type="Label" parent="."]
-margin_right = 64.0
-margin_bottom = 14.0
-text = "Reference"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="RestartNotificationArea" parent="." instance=ExtResource( 4 )]
+position = Vector2( 513.4, 1031.64 )
+scale = Vector2( 42.8, 1 )
 
-[editable path="Player"]
+[node name="RestartManager" parent="." instance=ExtResource( 5 )]
